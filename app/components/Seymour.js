@@ -110,8 +110,8 @@ class Seymour extends Component {
                   Player Level: {this.state.level}
 
               
-                </h1>
-                <img alt="Boss 1" src="http://www.sethcodes.com/wp-content/uploads/2017/08/boss3.jpg" width="350"/>
+                </h1> 
+                <img alt="Boss 1" src="http://www.sethcodes.com/wp-content/uploads/2017/08/boss3-e1502517779716.jpg" width="350"/>
               </div>
             </div>
           </div>
