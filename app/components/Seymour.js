@@ -112,7 +112,7 @@ class Seymour extends Component {
               
                 </h1>
                 <img
-                  alt="Boss 1"
+                  alt="Boss 1" width="400"
                   src="http://www.sethcodes.com/wp-content/uploads/2017/08/boss3.jpg"
                 />
               </div>
