@@ -9,27 +9,27 @@ import FoodItem from "./children/FoodItem";
 const data = [
   {
     id: 0,
-    title: "Fighter Bob",
-    description: "Ranged Weapon",
-    alt: "Fighter Bob",
-    img: "http://www.sethcodes.com/wp-content/uploads/2017/08/hero4.png",
-    food: 7
+    title: "Mmm Mmm Good!",
+    description: "Human Flesh",
+    alt: "Scared Girls",
+    img: "http://www.toxel.com/wp-content/uploads/2011/10/fear08.jpg",
+    food: 25
   },
   {
     id: 1,
-    title: "Samurai Rick",
-    description: "Brute Force",
-    alt: "Samurai",
-    img: "http://www.sethcodes.com/wp-content/uploads/2017/08/hero3.png",
-    food: 11
+    title: "Tasty Treats",
+    description: "Frog Livers",
+    alt: "Frog",
+    img: "http://www.cellphonetaskforce.org/wp-content/uploads/2012/01/frog-left.jpg",
+    food: 12
   },
   {
     id: 2,
-    title: "Wizard Mike",
-    description: "Magic Casting",
-    alt: "Wizard",
-    img: "http://www.sethcodes.com/wp-content/uploads/2017/08/hero2.png",
-    food: 16
+    title: "Nom Noms",
+    description: "Organic Tofu",
+    alt: "Tofu",
+    img: "http://afcsoyfoods.com/media/2014/02/afc-organic-tofu-firm-14oz.png",
+    food: 12
   }
 ];
 // This is the main component, Seymour
@@ -41,8 +41,6 @@ class Seymour extends Component {
     // Notice the data property here and the data const defined above the component
     this.state = {
       consumed: 0,
-      level: 1,
-      img: "https://media.giphy.com/media/pBj0EoGSYjGms/giphy.gif",
       data
     };
     // We need to bind our feedSeymour method to our component with this syntax in the constructor since we'll be passing it to child components
@@ -56,7 +54,7 @@ class Seymour extends Component {
       console.log("Current state:", this.state);
     }
     else {
-      alert("You have defeated the boss!");
+      alert("You have done well. Seymour is very full!");
     }
   }
   feedSeymour(food) {
@@ -70,14 +68,6 @@ class Seymour extends Component {
     }
     else {
       this.setState({ consumed: newConsumed });
-    }
-    if (newConsumed > 100) {
-      // Otherwise update this.state.consumed with the new value
-      this.setState({ level: 2 });
-    }
-    if (newConsumed > 200) {
-      // Otherwise update this.state.consumed with the new value
-      this.setState({ level: 3 });
     }
   }
   // This helper method will return an array of JSX containing a bootstrap column and
@@ -97,21 +87,25 @@ class Seymour extends Component {
     return (
       <div className="container">
         <div className="row">
+          <div className="jumbotron">
+            <h2>Feed Me Seymour!</h2>
+            <p>
+              <em>Click on Seymour's Children to Feed Him</em>
+            </p>
+          </div>
           <div className="col-md-12">
             <div className="panel panel-default">
               <div className="panel-heading">
-                <h3 className="panel-title text-center">Boss</h3>
+                <h3 className="panel-title text-center">Seymour</h3>
               </div>
               <div className="panel-body text-center">
                 <h1>
-                  <p>
-                  Hit Points: {this.state.consumed}
-                  </p>
-                  Player Level: {this.state.level}
-
-              
-                </h1> 
-                <img alt="Boss 1" src="http://www.sethcodes.com/wp-content/uploads/2017/08/boss3-e1502517779716.jpg" width="350"/>
+                  Food Consumed: {this.state.consumed}
+                </h1>
+                <img
+                  alt="Seymour"
+                  src="https://media.giphy.com/media/pBj0EoGSYjGms/giphy.gif"
+                />
               </div>
             </div>
           </div>
@@ -125,28 +119,3 @@ class Seymour extends Component {
 }
 
 export default Seymour;
-
-
-///////
-var SampleApp = React.createClass({
-  render: function() {
-    var vSource = {uri: 'http://cdn.arstechnica.net/wp-content/uploads/2016/02/5718897981_10faa45ac3_b-640x624.jpg'};
-    return (
-      <View style={styles.container}>
-        <Text>CustomImage Example</Text>
-        <CustomImage source={vSource} />
-      </View>
-    );
-  }
-});
-
-var CustomImage = React.createClass({
-  render: function() {
-    return (
-      <View style={styles.container}>
-        <Image source={this.props.source} style={{width: 60,height: 60,}}/>
-      </View>
-    );
-  }
-});
-

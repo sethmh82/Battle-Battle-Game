@@ -3,7 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 // Include the Main Component
-import Seymour from "./components/Seymour";
+import Battle from "./components/Battle";
 
 // This code here allows us to render our main component (in this case Seymour)
-ReactDOM.render(<Seymour />, document.getElementById("app"));
+ReactDOM.render(<Battle />, document.getElementById("app"));
