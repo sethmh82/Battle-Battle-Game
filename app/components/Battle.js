@@ -39,7 +39,7 @@ const dataWeapon = [
     descWeapon: "Accurate but weak",
     altWeapon: "Small Blaster",
     imgWeapon: "./assets/img/gun1.png",
-    upgrade: 25,
+    upgradeCost: 25,
     weaponStrength: 7
   },
   {
@@ -48,7 +48,7 @@ const dataWeapon = [
     descWeapon: "Samurai Rick",
     altWeapon: "Samurai",
     imgWeapon: "./assets/img/knife1.png",
-    upgrade: 25,
+    upgradeCost: 25,
     weaponStrength: 11
   },
   {
@@ -57,7 +57,7 @@ const dataWeapon = [
     descWeapon: "Wizard Mike",
     altWeapon: "Wizard",
     imgWeapon: "./assets/img/book1.png",
-    upgrade: 25,
+    upgradeCost: 25,
     weaponStrength: 16
   }
 ];
@@ -86,6 +86,7 @@ class Battle extends Component {
       dataWeapon
     };
     this.attackBoss = this.attackBoss.bind(this);
+    this.upgradeWeapon = this.upgradeWeapon.bind(this);
   }
   
   
@@ -103,7 +104,7 @@ class Battle extends Component {
   // ATTACK THE BOSS
   attackBoss(strength) {
     const newHealth = this.state.health - strength;
-    const newMoney= this.state.money + 2;
+    const newMoney = this.state.money + 2;
 
     if (newHealth < 1) {
       this.setState({ health: 0 });
@@ -130,13 +131,13 @@ class Battle extends Component {
 
   // UPGRADE WEAPON
   upgradeWeapon(upgrade) {
-    const newStrength = this.state.strength + 15;
-    const newMoney= this.state.money - this.state.upgrade;
+    const newStrength = this.state.weaponStrength + 15;
+    const newMoney = this.state.money - upgrade;
     if (newMoney < 0) {
         alert("You don't have enough");
     } else {
       this.setState({ 
-        strength: newStrength,
+        weaponStrength: newStrength,
         money: newMoney
       });
     }
