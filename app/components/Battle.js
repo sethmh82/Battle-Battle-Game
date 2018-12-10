@@ -10,7 +10,7 @@ const dataHero = [
     title: "Ranged Weapon",
     description: "Sniper Bob",
     alt: "Fighter Bob",
-    img: "http://www.sethcodes.com/wp-content/uploads/2017/08/hero4.png",
+    img: "https://sethharden.com/work/wp-content/uploads/2018/12/c1.jpg",
     strength: 7
   },
   {
@@ -18,7 +18,7 @@ const dataHero = [
     title: "Brute Foce",
     description: "Samurai Rick",
     alt: "Samurai",
-    img: "http://www.sethcodes.com/wp-content/uploads/2017/08/hero3.png",
+    img: "https://sethharden.com/work/wp-content/uploads/2018/12/c2.jpg",
     strength: 11
   },
   {
@@ -26,7 +26,7 @@ const dataHero = [
     title: "Magic",
     description: "Wizard Mike",
     alt: "Wizard",
-    img: "http://www.sethcodes.com/wp-content/uploads/2017/08/hero2.png",
+    img: "https://sethharden.com/work/wp-content/uploads/2018/12/c3.jpg",
     strength: 16
   }
 ];
@@ -80,7 +80,7 @@ class Battle extends Component {
       health: 500,
       money: 25,
       level: 1,
-      bossimg: "http://www.sethcodes.com/wp-content/uploads/2017/08/boss3.jpg",
+      bossimg: "https://sethharden.com/work/wp-content/uploads/2018/12/b1.jpg",
       bossalt: "Boss 1",
       dataHero,
       dataWeapon
